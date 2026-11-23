@@ -58,3 +58,50 @@ h3{font-size:1.36rem}
 @media(max-width:760px){body{font-size:17px}.hero-grid{grid-template-columns:1fr}.hero{padding:65px 0}.section{padding:68px 0}.hero-panel{max-width:600px}.three,.domain-grid{grid-template-columns:1fr 1fr}.book-teaser{padding:24px}.nav a{font-size:1.05rem}}
 @media(max-width:540px){.three,.domain-grid,.rubric{grid-template-columns:1fr}.feature,.domain{padding:27px}.hero h1{font-size:clamp(2.65rem,11vw,3.35rem)}.hero .lead{font-size:1.16rem}.book-teaser{flex-direction:column}.book-teaser img{width:145px}.identity img{width:100px;height:130px}.identity{gap:15px}.identity p{font-size:.93rem}}
 @media(prefers-reduced-motion:reduce){.feature,.domain{transition:none}.feature:hover,.domain:hover{transform:none}}
+
+/* v3 — editorial visual system: compact icons, intentional spacing, elevated cards */
+:root{--navy:#112f3b;--ink:#173640;--teal:#17645f;--muted:#465e65;--line:#d6e4e1;--paper:#f5f8f7;--mint:#b8e8d8}
+body{font-size:18px;line-height:1.65}
+.header{box-shadow:0 3px 22px rgba(10,45,51,.045)}
+.nav a{font-size:.92rem}
+.hero{background:radial-gradient(ellipse at 83% 15%,rgba(64,132,137,.34),transparent 43%),linear-gradient(130deg,#102c39 0%,#123d45 100%)}
+.hero-panel{border:1px solid rgba(255,255,255,.7);border-radius:24px;background:linear-gradient(145deg,#fff,#edf7f4);box-shadow:0 22px 65px rgba(0,18,27,.24);padding:34px}
+/* Explicitly constrain inline SVGs: fixes enormous icons in PDF rendering */
+.line-icon,.feature .line-icon,.domain .line-icon,.process-node .line-icon{display:block!important;width:26px!important;height:26px!important;min-width:26px!important;min-height:26px!important;max-width:26px!important;max-height:26px!important;flex:0 0 26px!important;overflow:visible}
+.feature-top{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:14px!important;margin:0 0 18px!important;min-height:52px!important}
+.feature-top .number{margin:0!important;font-size:.78rem}
+.icon-tile,.feature .icon-tile,.domain .icon-tile{display:inline-flex!important;align-items:center!important;justify-content:center!important;flex:0 0 52px!important;width:52px!important;height:52px!important;min-width:52px!important;min-height:52px!important;max-width:52px!important;max-height:52px!important;border-radius:14px!important;padding:0!important;overflow:hidden!important;background:#e2f2ec;border:1px solid #cde5dc;color:#17645f}
+.process-node .process-icon{display:inline-flex!important;align-items:center!important;justify-content:center!important;flex:0 0 50px!important;width:50px!important;height:50px!important;min-width:50px!important;min-height:50px!important;max-width:50px!important;max-height:50px!important;border-radius:15px!important;background:#e0f1eb!important;padding:0!important}
+.process-node .process-icon .line-icon{width:25px!important;height:25px!important;min-width:25px!important;min-height:25px!important;max-width:25px!important;max-height:25px!important}
+.process-node{display:flex!important;align-items:center!important;gap:16px!important;min-height:60px!important}
+.process-line{height:24px!important;margin-left:24px!important;border-left:2px dashed #9dc9bb!important}
+.process-node strong{font-size:1.07rem!important;line-height:1.35}.process-node small{font-size:.86rem!important;line-height:1.45}
+.panel-kicker{font-size:.75rem!important;letter-spacing:.12em}.panel-bottom{font-size:.85rem!important}
+/* Modern scientific cards with restrained colour rather than large decoration */
+.feature,.domain{display:flex;flex-direction:column;justify-content:flex-start;min-height:0!important;padding:28px!important;border:1px solid #d9e6e3!important;border-radius:18px!important;background:#fff!important;box-shadow:0 8px 22px rgba(18,57,66,.055)!important;transition:box-shadow .18s ease,transform .18s ease,border-color .18s ease!important}
+.feature:before,.domain:before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:#77bfb0}
+.feature:nth-child(3n+2):before,.domain:nth-child(3n+2):before{background:#82a9c9}
+.feature:nth-child(3n):before,.domain:nth-child(3n):before{background:#a7a0d1}
+.feature:nth-child(3n+2) .icon-tile,.domain:nth-child(3n+2) .icon-tile{background:#eaf1f9!important;color:#37658c!important;border-color:#dbe6f2!important}
+.feature:nth-child(3n) .icon-tile,.domain:nth-child(3n) .icon-tile{background:#f0edf9!important;color:#67618e!important;border-color:#e5e0f3!important}
+.feature:hover,.domain:hover{transform:translateY(-3px)!important;box-shadow:0 16px 35px rgba(18,57,66,.11)!important;border-color:#9ac7be!important}
+.feature h3,.domain h3{font-size:1.24rem!important;margin-bottom:11px!important}
+.feature p,.domain p{font-size:1rem!important;line-height:1.58!important}
+.three,.domain-grid{gap:20px!important;align-items:stretch}
+.section{padding:84px 0!important}
+.tinted{background:linear-gradient(135deg,#eef5f3,#f8faf9)!important}
+.note-card,.status-card{background:white!important;border:1px solid #d9e7e3!important;border-radius:18px!important;box-shadow:0 12px 30px rgba(18,57,66,.07)!important}
+/* Stronger, consistent buttons */
+.button{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:15px 24px!important;border-radius:12px!important;font-size:.99rem!important;font-weight:700!important;line-height:1.25;letter-spacing:.005em;border:1px solid transparent;text-decoration:none!important;box-shadow:0 7px 17px rgba(5,36,42,.12);transition:transform .17s ease,box-shadow .17s ease,background-color .17s ease!important}
+.button.primary{background:#b9e9da!important;color:#123b42!important;border-color:#b9e9da!important}
+.button.primary:hover{background:#d1f4e7!important;box-shadow:0 11px 24px rgba(5,36,42,.2);transform:translateY(-2px)}
+.button.secondary{background:rgba(255,255,255,.075)!important;color:#fff!important;border-color:rgba(255,255,255,.58)!important;box-shadow:none}
+.button.secondary:hover{background:rgba(255,255,255,.18)!important;transform:translateY(-2px)}
+.page-hero .button.secondary{color:white!important}
+.text-link,.note-card a:not(.button),.arrow-link{font-size:1rem;text-underline-offset:5px;text-decoration-thickness:1px}
+.contact-panel{background:#f2f8f5}.contact-card{background:white;border:1px solid #d8e8e1;border-radius:20px;padding:35px;box-shadow:0 12px 35px rgba(18,57,66,.08)}.contact-card h2{font-size:2rem}.contact-card .button.primary{background:#14655f!important;color:white!important;border-color:#14655f!important}.contact-card .button.primary:hover{background:#0d4d49!important}.contact-note{margin-top:20px}
+.contact-mini{display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap;padding:22px 16px 6px;font-size:.94rem;color:#cbdcde}.contact-mini a{color:#b9e9da;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:950px){.nav a{font-size:.84rem}.hero-grid{grid-template-columns:1fr 1fr;gap:25px}}
+@media(max-width:760px){.hero-grid{grid-template-columns:1fr}.hero-panel{max-width:650px}.section{padding:64px 0!important}.three,.domain-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.nav a{font-size:1.05rem}.button{min-height:52px}}
+@media(max-width:540px){.three,.domain-grid{grid-template-columns:1fr}.feature,.domain{padding:25px!important}.hero-panel{padding:24px}.actions{gap:12px}.actions .button{width:100%}.contact-card{padding:25px}.hero h1{font-size:clamp(2.65rem,11vw,3.4rem)}}
+@media(prefers-reduced-motion:reduce){.feature,.domain,.button{transition:none!important}.feature:hover,.domain:hover,.button:hover{transform:none!important}}
