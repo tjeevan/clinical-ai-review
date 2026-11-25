@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://jeevantjr.github.io/clinical-ai-review/sitemap.xml
+Sitemap: https://drjeevaraj.com/sitemap.xml
